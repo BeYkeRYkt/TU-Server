@@ -1,6 +1,6 @@
 /target/
 /world/
-/log/
+/logs/
 banned-ips.json
 banned-players.json
 ops.json
