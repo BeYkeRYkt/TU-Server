@@ -21,22 +21,23 @@ public class ServerEula {
     }
 
     private boolean loadEULAFile(File inFile) {
-        FileInputStream var2 = null;
-        boolean var3 = false;
-
-        try {
-            Properties var4 = new Properties();
-            var2 = new FileInputStream(inFile);
-            var4.load(var2);
-            var3 = Boolean.parseBoolean(var4.getProperty("eula", "true")); //It's Russia, baby.
-        } catch (Exception var8) {
-            LOG.warn("Failed to load " + inFile);
-            this.createEULAFile();
-        } finally {
-            IOUtils.closeQuietly(var2);
-        }
-
-        return var3;
+//        FileInputStream var2 = null;
+//        boolean var3 = false;
+//
+//        try {
+//            Properties var4 = new Properties();
+//            var2 = new FileInputStream(inFile);
+//            var4.load(var2);
+//            var3 = Boolean.parseBoolean(var4.getProperty("eula", "true")); //It's Russia, baby.
+//        } catch (Exception var8) {
+//            LOG.warn("Failed to load " + inFile);
+//            this.createEULAFile();
+//        } finally {
+//            IOUtils.closeQuietly(var2);
+//        }
+//
+//        return var3;
+        return true; //( ͡° ͜ʖ ͡°)
     }
 
     public boolean hasAcceptedEULA() {
@@ -49,8 +50,8 @@ public class ServerEula {
         try {
             Properties var2 = new Properties();
             var1 = new FileOutputStream(this.eulaFile);
-            var2.setProperty("eula", "false");
-            var2.store(var1, "By changing the setting below to TRUE you are indicating your agreement to our EULA (https://account.mojang.com/documents/minecraft_eula).");
+            var2.setProperty("eula", "true");
+            var2.store(var1, "By changing the setting below to TRUE you are NOT indicating your agreement to our EULA (https://account.mojang.com/documents/minecraft_eula).");
         } catch (Exception var6) {
             LOG.warn("Failed to save " + this.eulaFile, var6);
         } finally {
