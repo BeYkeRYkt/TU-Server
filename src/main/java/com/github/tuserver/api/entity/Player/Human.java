@@ -10,12 +10,16 @@ public interface Human extends EntityLivingBase {
 
 	public void setDisplayName(String name);
 
+        @Override
 	public boolean isSneaking();
 
+        @Override
 	public void setSneaking(boolean sneak);
 
+        @Override
 	public boolean isSprinting();
 
+        @Override
 	public void setSprinting(boolean sprinting);
 
 	public void saveData();
@@ -28,6 +32,7 @@ public interface Human extends EntityLivingBase {
 
 	public boolean hasItemInHand();
 
+        @Override
 	public ItemStack getItemInHand(); // getCurrentEquippedItem()
 
 	public void setItemInHand(ItemStack item);
@@ -36,8 +41,10 @@ public interface Human extends EntityLivingBase {
 
 	public boolean isBlocking();
 
+        @Override
 	public boolean isNoclip();
 
+        @Override
 	public void setNoclip(boolean noclip);
 
 	public void sleepInBedAt(int x, int y, int z);

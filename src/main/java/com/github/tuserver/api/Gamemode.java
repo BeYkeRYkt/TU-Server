@@ -1,15 +1,16 @@
 package com.github.tuserver.api;
 
 public enum Gamemode {
-	UNKNOWN(-1), SURVIVAL(0), CREATIVE(1), ADVENTURE(2);
 
-	private int id;
+    UNKNOWN(-1), SURVIVAL(0), CREATIVE(1), ADVENTURE(2), SPECTATOR(3);
 
-	private Gamemode(int id) {
-		this.id = id;
-	}
+    private final int id;
 
-	public int getID() {
-		return this.id;
-	}
+    private Gamemode(int id) {
+        this.id = id;
+    }
+
+    public int getID() {
+        return this.id;
+    }
 }
