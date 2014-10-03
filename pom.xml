@@ -73,5 +73,10 @@
             <version>3.8.1</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>authlib</groupId>
+            <artifactId>authlib</artifactId>
+            <version>1.5.17</version>
+        </dependency>
     </dependencies>
 </project>
