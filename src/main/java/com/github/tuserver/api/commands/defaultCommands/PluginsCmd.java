@@ -8,6 +8,7 @@ import com.github.tuserver.api.commands.ICommandSender;
 import com.github.tuserver.api.commands.ICommandWrapper;
 import com.github.tuserver.api.plugin.Plugin;
 import com.github.tuserver.api.utils.ChatColors;
+import java.util.Arrays;
 
 public class PluginsCmd implements ICommandWrapper {
 	@Override
@@ -17,9 +18,7 @@ public class PluginsCmd implements ICommandWrapper {
 
 	@Override
 	public List getCommandAliases() {
-		List<String> list = new ArrayList<String>();
-		list.add("pl");
-		return list;
+		return Arrays.asList(new String[]{"pl"});
 	}
 
 	@Override

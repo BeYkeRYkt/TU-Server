@@ -117,14 +117,15 @@ public class DedicatedServer extends MinecraftServer implements IServer
         this.settings = new PropertyManager(new File("server.properties"));
         this.eula = new ServerEula(new File("eula.txt"));
 
-        if (!this.eula.hasAcceptedEULA())
-        {
-            logger.info("You need to agree to the EULA in order to run the server. Go to eula.txt for more info.");
-            this.eula.createEULAFile();
-            return false;
-        }
-        else
-        {
+        //No eula - no problems :trf:
+//        if (!this.eula.hasAcceptedEULA())
+//        {
+//            logger.info("You need to agree to the EULA in order to run the server. Go to eula.txt for more info.");
+//            this.eula.createEULAFile();
+//            return false;
+//        }
+//        else
+//        {
             if (this.isSinglePlayer())
             {
                 this.setHostname("127.0.0.1");
@@ -280,7 +281,7 @@ public class DedicatedServer extends MinecraftServer implements IServer
 
                 return true;
             }
-        }
+        //}
     }
 
     /**
